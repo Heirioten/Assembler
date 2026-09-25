@@ -1,5 +1,6 @@
 # Hack Assembler Project 📄 --> 011010111010
 
+## History Of This Project
 When I was in my freshman year of college during my Spring semester, I took a class called "Computer Organization & Assembly Language", where we spent the first half of the semester focused on the [Nand2Tetris](https://www.nand2tetris.org/) course.
 I learned a lot about logic gates, computer memory, computer architecture, and more. One especially interesting part of this course was when we learned about how an assembly language worked.
 At this point we hadn't learned about the x86 assembly language, so we were using an incredibly simplified version of an assembly language.
@@ -28,3 +29,17 @@ When I wrote the first assembler I could barely tell what I had written the day 
 When I wrote the first assembler I couldn't use pointers effectively. Now I know how to use them for addresses, arrays, and structs. 
 
 I'm happy that I found the chance to attempt this project again. It helped me practice and learn so much about lower-level programming languages like C and, by association, x86 assembly.
+
+## Running the program
+NOTE: THIS PROGRAM WAS MADE ON A LINUX DISTRIBUTION, there may be file type inconsistencies that don't allow for other operating systems to run the program
+
+After pulling the repository, you should see a few key files and folders:
+1. assembler.c, which is the main driving force of the program
+2. testing.c, which was a file I used to test different aspects of the program. I wanted this to be a unit testing suite however I couldn't get it setup properly so I created the next best thing.
+3. makefile, run `make` to compile the entire program, run `make clean` to clean up the executable and object files for the program.
+4. /Test_Files, a directory with two testing files: Max.asm, which has a small amount of lines, and Pong.asm, which is a very text file
+5. /Output_Files, a directory where all output files from the assembler program will be deposited into
+
+In order to run the program, go into the root Assembler directory, run the command `make`, wait for the program to compile, then run the command `.\assembler .\Test_Files\<File you want to run>`.
+You should see the program write its contents into the /Output_Files directory. If you want to try more example files, the [Nand2Tetris Simulator](https://nand2tetris.github.io/web-ide/asm)
+has more example scripts that you can download and import into the \Test_Files directory. They also have a per file binary comparison functionality where you can compare the binary output of the .asm file and your binary output. For example, if you want to see if the assembler processed Pong.asm correctly, simply load the .asm file into the Nand2Tetris assembler, click the translate button, upload the Pong.hack assembler output file into the compare code column, and click the compare button. 
